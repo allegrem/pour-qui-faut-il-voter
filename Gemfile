@@ -7,7 +7,7 @@ gem 'rails', '4.0.0.rc2'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc2'
+# gem 'sass-rails', '~> 4.0.0.rc2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -48,3 +48,9 @@ end
 # heroku
 gem 'rails_12factor', group: :production
 ruby "2.1.0"
+
+
+# bootstrap
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
