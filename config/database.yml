@@ -19,7 +19,6 @@ development:
   encoding: unicode
   database: campagne_bed_development
   pool: 5
-  username: campagne_bed
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
