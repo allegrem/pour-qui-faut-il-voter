@@ -1,4 +1,8 @@
 <h1>Pour qui faut-il voter ?</h1>
 
+<h2><%= Item::LIST_NAMES[Item.best_list] %></h2>
+
+<p>
 Bedfathers: <%= Item.total_points 0 %><br />
 Bedzacoatl: <%= Item.total_points 1 %>
+</p>

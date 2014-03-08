@@ -15,4 +15,8 @@ class Item < ActiveRecord::Base
     Item.where('list = ?', list).sum(:points)
   end
 
+  def self.best_list
+    0.upto(LIST_NAMES.length-1).map { |l| total_points l }.each_with_index.max[1]
+  end
+
 end
