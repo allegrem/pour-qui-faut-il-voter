@@ -1,12 +1,9 @@
 class Item < ActiveRecord::Base
 
+  LIST_NAMES = ['The Bedfathers','Bedzalcoatl']
+
   def list_name
-    case list
-    when 0
-      "The Bedfathers"
-    when 1
-      "Bedzalcoatl"
-    end
+    LIST_NAMES[list]
   end
 
 end
