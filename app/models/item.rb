@@ -11,4 +11,8 @@ class Item < ActiveRecord::Base
     LIST_NAMES[list]
   end
 
+  def self.total_points list
+    Item.where('list = ?', list).sum(:points)
+  end
+
 end
