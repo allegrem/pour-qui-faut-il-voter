@@ -6,3 +6,9 @@
 Bedfathers: <%= Item.total_points 0 %><br />
 Bedzacoatl: <%= Item.total_points 1 %>
 </p>
+
+<ul>
+<% @items.each do |i| %>
+  <li><%= i.list_name %> : <%= i.title %> (<%= i.points %>)</li>
+<% end %>
+</ul>
