@@ -68,6 +68,7 @@ h1 {
   font-size: 3.5em;
   margin: 0;
   margin-top: 1em;
+  margin-bottom: 1em;
 
   img {
     width: 20%;
@@ -104,6 +105,16 @@ h1 {
     text-align: center;
     line-height: 2em;
     clear: both;
+
+    strong {
+      small {
+        font-weight: 100;
+        font-size: 0.6em;
+      }
+
+      &.pos { color: #2ecc71; }
+      &.neg { color: #e74c3c; }
+    }
 
     &.list0 {
       margin-left: 5%;
