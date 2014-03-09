@@ -17,3 +17,5 @@
 
 
 *.sublime*
+.env
+Procfile
