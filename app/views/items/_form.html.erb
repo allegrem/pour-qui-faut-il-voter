@@ -13,26 +13,19 @@
 <%= form_for @item, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :title, :class => 'text_field' %>
-    </div>
+    <%= f.text_area :title, :class => 'text_field', required: true %>
   </div>
   <div class="control-group">
     <%= f.label :list, :class => 'control-label' %>
-    <div class="controls">
     <%= f.select :list, list_select_options, class: 'text_field' %>
-    </div>
   </div>
   <div class="control-group">
     <%= f.label :points, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :points, :class => 'text_field' %>
-    </div>
+    <%= f.text_field :points, :class => 'text_field', required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                items_path, :class => 'btn' %>
+    <%= f.submit "Go!", :class => 'btn btn-primary' %>
+    <%= link_to "Annuler", items_path %>
   </div>
 <% end %>
