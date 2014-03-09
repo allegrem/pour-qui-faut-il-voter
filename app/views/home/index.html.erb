@@ -1,14 +1,25 @@
-<h1>Pour qui faut-il voter ?</h1>
+<header>
+  <h1>Pour qui faut-il voter ?</h1>
 
-<p class="best-list">
-  <%= image_tag "list#{@best_list}.jpg", alt: Item::LIST_NAMES[@best_list] %>
-  Il faut voter <strong><%= Item::LIST_NAMES[@best_list] %></strong>
-</p>
+  <p class="best-list">
+    <%= image_tag "list#{@best_list}.jpg", alt: Item::LIST_NAMES[@best_list] %>
+    Il faut voter <strong><%= Item::LIST_NAMES[@best_list] %></strong>
+  </p>
+</header>
 
-<p>
-Bedfathers: <%= Item.total_points 0 %><br />
-Bedzacoatl: <%= Item.total_points 1 %>
-</p>
+
+<ul class="scores">
+  <li>
+    <%= image_tag "list0.jpg", alt: "The Bedfathers" %>
+    The Bedfathers
+    <strong><%= Item.total_points 0 %> <small>pts</small></strong>
+  </li>
+  <li>
+    <%= image_tag "list1.jpg", alt: "Bedzacoatl" %>
+    Bedzacoatl
+    <strong><%= Item.total_points 1 %> <small>pts</small></strong>
+  </li>
+</ul>
 
 <ul>
 <% @items.each do |i| %>

@@ -10,10 +10,27 @@ font-family: 'Lobster', cursive;
 font-family: 'Roboto', sans-serif;
 */
 
+@cloud: #ecf0f1;
+@blue: #2c3e50;
+
+
 body {
-  background-color: #ecf0f1;
+  background-color: @blue;
+  color: @cloud;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+}
+
+
+header {
+  color: @blue;
+  background-color: @cloud;
+  padding-bottom: 7em;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -21,8 +38,9 @@ h1 {
   font-size: 6em;
   line-height: 2em;
   text-align: center;
-  color: #2c3e50;
+  margin: 0;
 }
+
 
 .best-list {
   font-size: 3em;
@@ -41,5 +59,36 @@ h1 {
     font-size: 1.7em;
     line-height: 1.2em;
     font-weight: 300;
+  }
+}
+
+
+.scores {
+  list-style: none;
+  font-size: 3em;
+  margin: 0;
+  margin-top: 1em;
+
+  img {
+    width: 20%;
+    display: block;
+    margin: auto;
+  }
+
+  li {
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+    line-height: 2em;
+
+    strong {
+      display: block;
+      font-size: 2em;
+
+      small { 
+        font-size: 0.3em; 
+        font-weight: 100;
+      }
+    }
   }
 }
