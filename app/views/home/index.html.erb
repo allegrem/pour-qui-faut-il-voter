@@ -25,8 +25,8 @@
 <ul class="items">
 <% @items.each do |i| %>
   <li class="list<%= i.list %>">
-    <%= i.title %>
     <strong class="<%= if i.points > 0 then 'pos' else 'neg' end %>"><%= i.points %> <small>pts</small></strong>
+    <%= i.title %>
   </li>
 <% end %>
 </ul>
