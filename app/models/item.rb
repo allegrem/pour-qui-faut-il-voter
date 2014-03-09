@@ -1,5 +1,7 @@
 class Item < ActiveRecord::Base
 
+  default_scope order('created_at DESC')
+
   LIST_NAMES = ['The Bedfathers','Bedzalcoatl']
 
   validates :title, presence: true
