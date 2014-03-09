@@ -1,6 +1,9 @@
 <h1>Pour qui faut-il voter ?</h1>
 
-<h2><%= Item::LIST_NAMES[Item.best_list] %></h2>
+<p class="best-list">
+  <%= image_tag "list#{@best_list}.jpg", alt: Item::LIST_NAMES[@best_list] %>
+  Il faut voter <strong><%= Item::LIST_NAMES[@best_list] %></strong>
+</p>
 
 <p>
 Bedfathers: <%= Item.total_points 0 %><br />
