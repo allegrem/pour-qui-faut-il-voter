@@ -25,7 +25,10 @@
 <ul class="items">
 <% @items.each do |i| %>
   <li class="list<%= i.list %>">
-    <strong class="<%= if i.points > 0 then 'pos' else 'neg' end %>"><%= i.points %> <small>pts</small></strong>
+    <strong class="<%= if i.points > 0 then 'pos' else 'neg' end %>">
+      <%= image_tag "list#{i.list}.jpg", alt: Item::LIST_NAMES[@best_list] %>
+      <%= i.points %> <small>pts</small>
+    </strong>
     <%= i.title %>
   </li>
 <% end %>
