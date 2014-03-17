@@ -3,8 +3,23 @@
 
 
 nav {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: -30px;
   font-size: 1.3em;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding-right: 15px;
+    }
+
+    li:not(:last-child):after {
+      content: '|';
+      padding-left: 15px;
+    }
+  }
 }
 
 
