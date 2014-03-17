@@ -26,9 +26,11 @@
       <nav>
         <ul>
           <li><%= link_to "Back to home page", home_path %></li>
+          <% unless params[:action] == 'new' && params[:controller] == "devise/sessions" %>
           <li><%= link_to "Item list", items_path %></li>
           <li><%= link_to "Invitations", new_admin_invitation_path %></li>
           <li><%= link_to "Logout", destroy_admin_session_path, method: :delete %></li>
+          <% end %>
         </ul>
       </nav>
 
