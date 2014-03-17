@@ -41,8 +41,10 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+    old_item = @item
     respond_to do |format|
       if @item.update(item_params)
+        Log.create admin: current_admin, item: @item, content: "Updated with params: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}. Old params were: list=#{old_item.list_name} ; points=#{old_item.points} ; title=#{old_item.title}"
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { head :no_content }
       else
