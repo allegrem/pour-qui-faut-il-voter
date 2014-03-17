@@ -1,4 +1,5 @@
 CampagneBed::Application.routes.draw do
+  devise_for :admins
   resources :items
 
   get 'home', to: 'home#index'
