@@ -1,8 +1,8 @@
 class CreateLogs < ActiveRecord::Migration
   def change
     create_table :logs do |t|
-      t.reference :admin
-      t.reference :item
+      t.references :admin
+      t.references :item
       t.text :content
 
       t.timestamps
