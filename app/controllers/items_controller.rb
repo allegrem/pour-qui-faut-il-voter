@@ -59,6 +59,7 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     respond_to do |format|
+      Log.create admin: current_admin, item: @item, content: "Destroyed. Old params were: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}."
       format.html { redirect_to items_url }
       format.json { head :no_content }
     end
