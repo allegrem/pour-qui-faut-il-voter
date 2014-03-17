@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  skip_filter :authenticate
+  skip_filter :authenticate_admin!
 
   def index
     @items = Item.all
