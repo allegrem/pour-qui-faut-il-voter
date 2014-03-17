@@ -54,4 +54,6 @@ ruby "2.1.0"
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
+# devise
 gem 'devise'
+gem 'devise_invitable'
