@@ -1,7 +1,7 @@
 class Log < ActiveRecord::Base
 
-  has_one :admin
-  has_one :item
+  belongs_to :admin
+  belongs_to :item
 
   default_scope order('created_at DESC')
 

@@ -28,6 +28,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
+        Log.create admin: current_admin, item: @item, content: "Created with params: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}"
         format.html { redirect_to items_url, notice: 'Item was successfully created.' }
         format.json { render action: 'show', status: :created, location: @item }
       else

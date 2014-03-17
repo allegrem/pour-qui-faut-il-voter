@@ -11,7 +11,7 @@
   <tbody>
     <% @logs.each do |l| %>
     <tr>
-      <td><%= l.admin %></td>
+      <td><%= l.admin.email %></td>
       <td><%= l.item_id %></td>
       <td><%= l.content %></td>
     </tr>
