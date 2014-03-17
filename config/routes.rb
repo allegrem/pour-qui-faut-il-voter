@@ -1,5 +1,5 @@
 CampagneBed::Application.routes.draw do
-  get "logs/index"
+  get "logs", to: 'logs#index'
   devise_for :admins
   resources :items
 
