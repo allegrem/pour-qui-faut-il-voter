@@ -1,6 +1,9 @@
 <header>
   <h1>Challenges</h1>
 
+  <% if @items.empty? %>
+    <p class="big-link">Aucun challenge pour le moment :(</p>
+  <% else %>
   <ul class="items challenges">
     <% @items.each do |i| %>
       <li>
@@ -9,8 +12,7 @@
       </li>
     <% end %>
   </ul>
+  <% end %>
 </header>
 
 <p class="big-link"><%= link_to "Retour à l'accueil", home_path %></p>
-
-<%= render 'scores' %>
