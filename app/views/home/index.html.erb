@@ -35,7 +35,7 @@
       <%= image_tag "list#{i.list}.jpg", alt: Item::LIST_NAMES[@best_list] %>
       <%= i.points %> <small>pts</small>
     </strong>
-    <%= i.title %>
+    <%=auto_link i.title %>
   </li>
 <% end %>
 </ul>
