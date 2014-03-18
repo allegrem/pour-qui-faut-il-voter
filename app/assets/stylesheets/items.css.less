@@ -12,8 +12,16 @@
 
 
 .items-table {
-  td:first-child {
-    width: 50%;
+  thead {
+    border-bottom: solid 1px @cloud;
+  }
+
+  th, td {
+    padding: 0.5em 0;
+
+    &:first-child {
+      width: 50%;
+    }
   }
 
   .challenge-label {
