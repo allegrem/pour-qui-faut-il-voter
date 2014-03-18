@@ -1,6 +1,6 @@
 class Item < ActiveRecord::Base
 
-  default_scope order('created_at DESC').where('list >= 0')
+  default_scope order('created_at DESC')
 
   LIST_NAMES = ['The Bedfathers','Bedzalcoatl']
 
@@ -10,7 +10,11 @@ class Item < ActiveRecord::Base
 
 
   def list_name
-    LIST_NAMES[list]
+    if list == -1
+      "Challenge"
+    else
+      LIST_NAMES[list]
+    end
   end
 
   def self.total_points list
