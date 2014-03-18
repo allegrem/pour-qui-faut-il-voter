@@ -36,7 +36,8 @@ Configure the environment variables.
 $ heroku config:set RACK_ENV=development PORT=3000 ... (same for all the config variables above)
 ```
 
-Deploy and enjoy!
+Deploy, migrate and enjoy!
 ```
 $ git push heroku
+$ heroku run rake db:migrate
 ```
