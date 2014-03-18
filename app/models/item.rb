@@ -1,11 +1,11 @@
 class Item < ActiveRecord::Base
 
-  default_scope order('created_at DESC')
+  default_scope order('created_at DESC').where('list >= 0')
 
   LIST_NAMES = ['The Bedfathers','Bedzalcoatl']
 
   validates :title, presence: true
-  validates :list, presence: true, inclusion: {in: 0.upto(LIST_NAMES.length-1)}
+  validates :list, presence: true, inclusion: {in: -1.upto(LIST_NAMES.length-1)}
   validates :points, presence: true, numericality: {only_integer: true}
 
 
