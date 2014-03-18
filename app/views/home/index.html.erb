@@ -14,18 +14,7 @@
 </header>
 
 
-<ul class="scores">
-  <li>
-    <%= link_to image_tag("list0.jpg", alt: "The Bedfathers"), "http://thebedfathers.com/" %>
-    The Bedfathers
-    <strong><%= Item.total_points 0 %> <small>pts</small></strong>
-  </li>
-  <li>
-    <%= link_to image_tag("list1.jpg", alt: "Bedzacoatl"), "http://bedzalcoatl.fr/" %>
-    Bedzalcoatl
-    <strong><%= Item.total_points 1 %> <small>pts</small></strong>
-  </li>
-</ul>
+<%= render 'scores' %>
 
 
 <ul class="items">
