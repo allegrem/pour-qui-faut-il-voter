@@ -7,4 +7,8 @@ class HomeController < ApplicationController
     @best_list = Item.best_list
   end
 
+  def challenges
+    @items = Item.where('list = 0')
+  end
+
 end

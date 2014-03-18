@@ -4,6 +4,7 @@ CampagneBed::Application.routes.draw do
   resources :items
 
   get 'home', to: 'home#index'
+  get 'challenges', to: 'home#challenges'
 
   root 'home#index'
 
