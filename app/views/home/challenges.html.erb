@@ -1,7 +1,14 @@
 <header>
   <h1>Challenges</h1>
 
-
+  <ul class="items challenges">
+    <% @items.each do |i| %>
+      <li>
+        <strong><%= i.points %> <small>pts</small></strong>
+        <%=auto_link i.title %>
+      </li>
+    <% end %>
+  </ul>
 </header>
 
 <p class="big-link"><%= link_to "Retour à l'accueil", home_path %></p>
