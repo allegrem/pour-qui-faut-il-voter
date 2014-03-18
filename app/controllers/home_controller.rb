@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   end
 
   def challenges
-    @items = Item.where('list = 0')
+    @items = Item.where('list = -1')
   end
 
 end
