@@ -10,11 +10,15 @@ class Item < ActiveRecord::Base
 
 
   def list_name
-    if list == -1
+    if challenge?
       "Challenge"
     else
       LIST_NAMES[list]
     end
+  end
+
+  def challenge?
+    list == -1
   end
 
   def self.total_points list
