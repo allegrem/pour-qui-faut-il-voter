@@ -17,6 +17,9 @@
 <%= render 'scores' %>
 
 
+<p class="big-link"><%= link_to "Voir la liste des challenges en cours", challenges_path %></p>
+
+
 <ul class="items">
 <% @items.each do |i| %>
   <li class="list<%= i.list %>">
