@@ -12,7 +12,7 @@
   <tbody>
     <% @chats.each do |chat| %>
       <tr>
-        <td><%= chat.pseudo %></td>
+        <td><%= chat.pseudo %> [<%= chat.ip %>]</td>
         <td><%= chat.message %></td>
         <td><%= chat.created_at.to_s %></td>
         <td>

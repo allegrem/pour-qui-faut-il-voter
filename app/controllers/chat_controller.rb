@@ -8,6 +8,7 @@ class ChatController < ApplicationController
 
   def create
     @chat = Chat.new(chat_params)
+    @chat.ip = request.remote_ip
     if @chat.save
       redirect_to wall_url
     else
