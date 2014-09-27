@@ -3,7 +3,7 @@ class ChatController < ApplicationController
   skip_filter :authenticate_admin!, only: [:create]
 
   def index
-    @chats = Chat.all
+    @chats = Chat.all.order('created_at desc')
   end
 
   def create
@@ -19,7 +19,7 @@ class ChatController < ApplicationController
     @chat = Chat.find(params[:id])
     if @chat.destroy
       Log.create admin: current_admin, content: "Chat destroyed. Old params were: pseudo=#{@chat.pseudo} ; message=#{@chat.message}."
-      format.html { redirect_to items_url }
+      redirect_to chat_index_url
     end
   end
 
