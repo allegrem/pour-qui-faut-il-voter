@@ -11,4 +11,9 @@ class HomeController < ApplicationController
     @items = Item.where('list = -1')
   end
 
+  def wall
+    @chats = Chat.all.limit(50).order('created_at desc')
+    @chat = Chat.new
+  end
+
 end

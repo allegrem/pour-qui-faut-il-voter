@@ -3,10 +3,11 @@ CampagneBed::Application.routes.draw do
   devise_for :admins
   resources :items
 
-  resources :chat, only: [:index, :destroy]
+  resources :chat, only: [:index, :create, :destroy]
 
   get 'home', to: 'home#index'
   get 'challenges', to: 'home#challenges'
+  get 'wall', to: 'home#wall'
 
   root 'home#index'
 

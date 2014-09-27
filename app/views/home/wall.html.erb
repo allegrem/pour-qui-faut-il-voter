@@ -1,0 +1,27 @@
+<header>
+  <h1>The Wall</h1>
+
+  <%= form_for @chat, url: chat_index_path do |f| %>
+    <%= f.text_field :pseudo, placeholder: "Pseudo" %>
+    <%= f.text_field :message, placeholder: "Message", autofocus: true %>
+    <%= f.submit value: "Go" %>
+  <% end %>
+
+  <% if @chats.empty? %>
+    <p class="big-link">Aucun message pour le moment :(</p>
+  <% else %>
+    <dl class="chats">
+      <% @chats.each do |chat| %>
+        <dt>
+          <time datetime="<%= chat.created_at %>">il y a <%= time_ago_in_words chat.created_at %></time>
+          <%= chat.pseudo %>
+        </dt>
+        <dd>
+          <%= chat.message %>
+        </dd>
+      <% end %>
+    </dl>
+  <% end %>
+</header>
+
+<p class="big-link"><%= link_to "Retour à l'accueil", root_path %></p>

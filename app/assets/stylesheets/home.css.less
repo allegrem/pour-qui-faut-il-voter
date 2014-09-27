@@ -219,3 +219,61 @@ footer {
     color: lighten(@blue, 30%);
   }
 }
+
+
+dl.chats {
+  font-size: 2em;
+  margin: 1em 10%;
+
+  dt {
+    display: block;
+    float: left;
+    margin-right: 40px;
+    width: 40%;
+    font-weight: 300;
+    text-align: right;
+  }
+
+  dd {
+    display: block;
+  }
+
+  time {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 0.5em;
+    margin-right: 10px;
+  }
+}
+
+.new_chat {
+  text-align: center;
+
+  input {
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 1px @cloud;
+    text-align: left;
+    padding: 0 15px;
+
+    &:focus {
+      border: solid @blue 1px;
+      outline: none;
+    }
+  }
+
+  #chat_pseudo {
+    width: 20%;
+  }
+
+  #chat_message {
+    width: 40%;
+  }
+
+  input[type=submit] {
+    width: 10%;
+    background-color: @blue;
+    color: @cloud;
+    text-align: center;
+  }
+}
