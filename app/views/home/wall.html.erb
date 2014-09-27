@@ -13,7 +13,7 @@
     <dl class="chats">
       <% @chats.each do |chat| %>
         <dt>
-          <time datetime="<%= chat.created_at %>">il y a <%= time_ago_in_words chat.created_at %></time>
+          <time datetime="<%= chat.created_at %>"><%= time_ago_in_words chat.created_at %></time>
           <%= chat.pseudo %>
         </dt>
         <dd>
