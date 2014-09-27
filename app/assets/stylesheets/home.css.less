@@ -61,6 +61,45 @@ h1 {
   }
 }
 
+h2 {
+  font-weight: 100;
+  font-size: 3em;
+  text-align: center;
+  margin: 0.5em 0 1em 0;
+}
+
+
+.boxes {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.box {
+  background-color: @blue;
+  width: 30%;
+  margin: 0 30px;
+  display: inline-block;
+  color: @cloud;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 10em;
+    fill: @cloud;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 
 .scores {
   list-style: none;

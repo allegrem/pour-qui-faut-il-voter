@@ -12,14 +12,29 @@
     <% end %>
   </p>
   
-  <p class="big-link"><%= link_to "Voir la liste des challenges en cours", challenges_path %></p>
+  <div class="boxes">
+    <%= link_to challenges_path do %>
+      <div class="box">
+        <h2>Challenges</h2>
+        <%= image_tag "cup.svg", alt: "Challenges" %>
+      </div>
+    <% end %>
+
+    <%= link_to '#' do %>
+      <div class="box">
+        <h2>The Wall</h2>
+        <%= image_tag "chat.svg", alt: "The Wall" %>
+      </div>
+    <% end %>
+  </div>
 </header>
 
 
+
+
+<h2>Détails</h2>
+
 <%= render 'scores' %>
-
-
-
 
 <ul class="items">
 <% @items.each do |i| %>
