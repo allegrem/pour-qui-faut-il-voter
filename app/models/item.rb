@@ -2,7 +2,7 @@ class Item < ActiveRecord::Base
 
   default_scope order('created_at DESC')
 
-  LIST_NAMES = ['The Bedfathers','Bedzalcoatl']
+  LIST_NAMES = ['Baba Forum','Forum Boyard']
 
   validates :title, presence: true
   validates :list, presence: true, inclusion: {in: -1.upto(LIST_NAMES.length-1)}
