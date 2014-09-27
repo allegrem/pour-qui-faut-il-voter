@@ -1,2 +1,28 @@
-<h1>Chat#index</h1>
-<p>Find me in app/views/chat/index.html.erb</p>
+<h1>Chat</h1>
+
+<table class="table items-table">
+  <thead>
+    <tr>
+      <th>Pseudo</th>
+      <th>Message</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @chats.each do |chat| %>
+      <tr>
+        <td><%= chat.pseudo %></td>
+        <td><%= chat.message %></td>
+        <td><%= chat.created_at.to_s %></td>
+        <td>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      chat_path(chat),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

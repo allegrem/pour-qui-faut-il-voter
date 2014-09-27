@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        Log.create admin: current_admin, item: @item, content: "Created with params: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}"
+        Log.create admin: current_admin, item: @item, content: "Item created with params: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}"
         format.html { redirect_to items_url, notice: 'Item was successfully created.' }
         format.json { render action: 'show', status: :created, location: @item }
       else
@@ -47,7 +47,7 @@ class ItemsController < ApplicationController
     end
     respond_to do |format|
       if @item.update(item_params)
-        Log.create admin: current_admin, item: @item, content: "Updated with params: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}. Old params were: list=#{old_item.list_name} ; points=#{old_item.points} ; title=#{old_item.title}"
+        Log.create admin: current_admin, item: @item, content: "Item updated with params: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}. Old params were: list=#{old_item.list_name} ; points=#{old_item.points} ; title=#{old_item.title}"
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { head :no_content }
       else
@@ -62,7 +62,7 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     respond_to do |format|
-      Log.create admin: current_admin, item: @item, content: "Destroyed. Old params were: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}."
+      Log.create admin: current_admin, item: @item, content: "Item destroyed. Old params were: list=#{@item.list_name} ; points=#{@item.points} ; title=#{@item.title}."
       format.html { redirect_to items_url }
       format.json { head :no_content }
     end
