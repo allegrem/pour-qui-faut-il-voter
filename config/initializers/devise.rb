@@ -115,8 +115,8 @@ Devise.setup do |config|
 
   # The key to be used to check existing users when sending an invitation
   # and the regexp used to test it when validate_on_invite is not set.
-  config.invite_key = {:email => /\A[^@]+@telecom-paristech.fr\z/}
-  # config.invite_key = {:email => /\A[^@]+@[^@]+\z/, :username => nil}
+  # config.invite_key = {:email => /\A[^@]+@telecom-paristech.fr\z/}
+  config.invite_key = {:email => /\A[^@]+@[^@]+\z/}
 
   # Flag that force a record to be valid before being actually invited
   # Default: false
@@ -179,7 +179,7 @@ Devise.setup do |config|
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
-  config.email_regexp = /\A[^@]+@telecom-paristech.fr\z/
+  config.email_regexp = /\A[^@]+@[^@]+\z/
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
