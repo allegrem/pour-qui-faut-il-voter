@@ -41,7 +41,7 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
-    old_item = @item
+    old_item = OpenStruct.new list_name: @item.list_name, points: @item.points, title: @item.title
     if @item.challenge? && params[:list].to_i > -1
       @item.created_at = DateTime.now
     end
