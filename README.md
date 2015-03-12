@@ -19,6 +19,12 @@ MAIL_AUTHENTICATION=plain
 MAIL_STARTTLS=true
 ```
 
+Run
+```
+$ bundle install
+$ rake db:migrate
+```
+
 Then create a `Procfile` containing
 ```
 web: bundle exec unicorn -p $PORT -E $RACK_ENV
